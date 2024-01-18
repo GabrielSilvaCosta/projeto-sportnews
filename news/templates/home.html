@@ -5,15 +5,14 @@
 {% block title %}Página Inicial{% endblock %}
 
 {% block content %}
-{% for news in news_list %}
-    <div class="news-card">
-        <h2 class="news-title">
-            <a href="{% url 'news-details-page' id=news.id %}">{{ news.title }}</a>
-        </h2>
-        <span class="news-date">{{ news.created_at|date:"d/m/Y" }}</span>
-        {% if news.image %}
-            <img src="{% static news.image.url %}" alt="{{ news.title }}">
-        {% endif %}
-    </div>
-{% endfor %}
+    {% for news in news_list %}
+        <div class="news-card">
+            <h2 class="news-title">{{ news.title }}</h2>
+            <a href="{% url 'news-details-page' news.id %}">Ver mais</a>
+            <span class="news-date">{{ news.created_at|date:"d/m/Y" }}</span>
+            {% if news.image %}
+                <img src="{% static news.image.url %}" alt="{{ news.title }}">
+            {% endif %}
+        </div>
+    {% endfor %}
 {% endblock %}
