@@ -2,8 +2,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 
 from news.forms import CategoryForm, NewsForm
-from .models import Category, News
-from .serializers import CategorySerializer
+from .models import Category, News, User
+from .serializers import CategorySerializer, UserSerializer
 from rest_framework import viewsets
 
 
@@ -44,3 +44,8 @@ def news_form(request):
 class CategoryListAPIView(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+
+class UserListAPIView(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

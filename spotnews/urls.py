@@ -4,12 +4,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
-from news.views import CategoryListAPIView
+from news.views import CategoryListAPIView, UserListAPIView
 
 
 router = DefaultRouter()
 
 router.register(r'categories', CategoryListAPIView)
+router.register(r'users', UserListAPIView)
 
 
 urlpatterns = [
