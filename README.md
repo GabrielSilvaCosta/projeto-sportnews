@@ -5,9 +5,13 @@ O projeto "News" é uma aplicação web que gerencia notícias, categorias e usu
 Tecnologias Utilizadas:
 
 Django: Um framework web em Python que facilita o desenvolvimento rápido e limpo de aplicações.
+
 Django REST Framework (DRF): Uma extensão poderosa do Django para construção de APIs.
+
 HTML e Templates Django: Para a criação das páginas web e a exibição dinâmica de dados.
-Banco de Dados MySQL: utilizamos o banco de daods MYSQL como banco de dados da nossa aplicação
+
+Banco de Dados MySQL: utilizamos o banco de dados MYSQL como banco de dados da nossa aplicação
+
 Modelos: Foram criados modelos para Category (categorias), User (usuários) e News (notícias) no backend.
 
 Validação de Dados: Foi implementada uma validação customizada para o título das notícias, garantindo que contenham pelo menos duas palavras.
